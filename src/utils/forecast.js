@@ -12,7 +12,9 @@ request({ url, json: true }, (error, { body }) => {
         callback(undefined,body.daily.data[0].summary+
             'precip probability: '+
         body.currently.precipProbability+
-        'temperature: '+ body.currently.temperature)
+        'temperature: '+ body.currently.temperature + 
+        " .temperature high is "+body.daily.data[0].temperatureHigh
+        + " and temperature low is "+body.daily.data[0].temperatureLow,'.')
     }
 })
 }
